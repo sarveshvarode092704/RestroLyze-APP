@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/second_background"
+    tools:context=".second_page"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/down_corner"
+        android:gravity="center"
+        android:text="Restaurant Rating Predictor"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText,TextContrastCheck,TextSizeCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewIntro"
+            android:layout_width="411dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center"
+            android:padding="30sp"
+            android:text="Enter the Data for Prediction : "
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,TextSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/corners_input">
+
+            <!-- Average Cost Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/textViewAverageCost"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Average Cost of two : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editTextAverageCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_input"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="e.g., 2000"
+                    android:inputType="number"
+                    android:minHeight="37dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#2196F3"
+                    android:textSize="19sp"
+                    tools:ignore="Autofill,HardcodedText,InefficientWeight,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Price Range Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/textViewPriceRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price Range(1-4) : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupPriceRange2"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Cuisines Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/textViewCuisines"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cuisines : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editTextCuisines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_input"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="e.g., Indian"
+                    android:textColor="#000000"
+                    android:textColorHint="#2196F3"
+                    android:textSize="19sp"
+                    tools:ignore="Autofill,HardcodedText,InefficientWeight,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Timings Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/textViewTimings"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:text="Timings : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editTextTimings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_input"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="e.g., 9 AM - 11 PM"
+                    android:textColor="#000000"
+                    android:textColorHint="#2196F3"
+                    android:textSize="19sp"
+                    tools:ignore="Autofill,HardcodedText,InefficientWeight,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Highlights Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/textViewHighlights"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:text="Highlights : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editTextHighlights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_input"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="e.g., Free Wi-Fi"
+                    android:textColor="#000000"
+                    android:textColorHint="#2196F3"
+                    android:textSize="19sp"
+                    tools:ignore="Autofill,HardcodedText,InefficientWeight,TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            android:background="#00796B"
+            android:layout_marginTop="20dp" />
+
+        <!-- Result TextView -->
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result will be displayed here"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:gravity="center" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".third_page"
+    android:background="@drawable/second_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/down_corner"
+        android:gravity="center"
+        android:text="Restaurant Recommendation Tool"
+        android:textColor="#FFFFFF"
+        android:textSize="27sp"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="411dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="27sp"
+                android:text="  Enter Data for Recommendation : "
+                android:textColor="#000000"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/corners_input">
+            <!-- City Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="    Enter City : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editTextText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_input"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="e.g Pune,Mumbai"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="37dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#2196F3"
+                    android:textSize="19sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- Locality Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Locality "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextText2"
+                    android:layout_width="190sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_input"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="e.g. Kothrud, Wadgaon"
+                    android:inputType="text"
+                    android:minHeight="37dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#2196F3"
+                    android:textSize="19sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- Cuisines Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Cuisines : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextText3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_input"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="e.g., Italian, Chinese"
+                    android:inputType="text"
+                    android:minHeight="37dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#2196F3"
+                    android:textSize="19sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- Table Booking Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Has Table booking? : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupTableBooking"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonYesTableBooking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        tools:ignore="HardcodedText,DuplicateSpeakableTextCheck"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNoTableBooking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No"
+                        tools:ignore="HardcodedText,DuplicateSpeakableTextCheck"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Online Delivery Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Has Online delivery : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupOnlineDelivery"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonYesOnlineDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        tools:ignore="HardcodedText"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNoOnlineDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No"
+                        tools:ignore="DuplicateIds,HardcodedText"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Price Range Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price Range : "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupPriceRange1"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="TextSizeCheck">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="3"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="middle"
+                    android:text="Submit"
+                    android:layout_gravity="center"
+                    app:iconSize="5sp"
+                    tools:ignore="Hardco'dedText,HardcodedText,InefficientWeight"/>
+            </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textViewResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
